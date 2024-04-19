@@ -15,12 +15,12 @@ public class Part {
     private String brand;
     private String type;
     private String spin;
-    private int attack;
-    private int defense;
-    private int stamina;
-    private int endurance;
-    private int dash;
-    private int burstResistance;
+    private Integer attack;
+    private Integer defense;
+    private Integer stamina;
+    private Integer endurance;
+    private Integer dash;
+    private Integer burstResistance;
     private double weight;
     private double height;
     private double width;

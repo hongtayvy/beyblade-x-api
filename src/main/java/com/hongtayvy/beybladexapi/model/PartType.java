@@ -6,9 +6,9 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public enum PartType {
-    BLADE("blade"),
-    RATCHET("ratchet"),
-    BIT("bit");
+    BLADE("Blade"),
+    RATCHET("Ratchet"),
+    BIT("Bit");
 
     private final String partType;
 }

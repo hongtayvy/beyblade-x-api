@@ -1,6 +1,7 @@
 package com.hongtayvy.beybladexapi.entity;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -14,12 +15,13 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "disc")
+@Entity
+@Table(name = "bxparts")
 public class PartEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    private int id;
+    private Integer id;
     @Column(name = "name")
     private String name;
     @Column(name = "part_type")
@@ -31,17 +33,17 @@ public class PartEntity {
     @Column(name = "spin")
     private String spin;
     @Column(name = "attack")
-    private int attack;
+    private Integer attack;
     @Column(name = "defense")
-    private int defense;
+    private Integer defense;
     @Column(name = "stamina")
-    private int stamina;
+    private Integer stamina;
     @Column(name = "endurance")
-    private int endurance;
+    private Integer endurance;
     @Column(name = "dash")
-    private int dash;
+    private Integer dash;
     @Column(name = "burst_resistance")
-    private int burstResistance;
+    private Integer burstResistance;
     @Column(name = "weight")
     private double weight;
     @Column(name = "height")
