@@ -12,8 +12,12 @@ import reactor.core.publisher.Mono;
 
 @Service
 public class BeybladeXService {
+    private final PartRepository partRepository;
+
     @Autowired
-    PartRepository partRepository;
+    public BeybladeXService(PartRepository partRepository){
+        this.partRepository = partRepository;
+    }
 
     private final BeybladeXMapper beybladeXMapper = new BeybladeXMapper();
 

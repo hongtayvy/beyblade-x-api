@@ -13,8 +13,12 @@ import reactor.core.publisher.Mono;
 @RestController
 @RequestMapping(path = "/beybladex")
 public class BeybladeXController {
+    private final BeybladeXService beyBladeXService;
+
     @Autowired
-    private BeybladeXService beyBladeXService;
+    public BeybladeXController(BeybladeXService beyBladeXService){
+        this.beyBladeXService = beyBladeXService;
+    }
     private final BeybladeXHelper beybladeXHelper = new BeybladeXHelper();
 
     @GetMapping
