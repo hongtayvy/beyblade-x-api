@@ -12,7 +12,7 @@ public class BeybladeXHelper {
             case "blade" -> BLADE;
             case "ratchet" -> RATCHET;
             case "bit" -> BIT;
-            default -> throw new IllegalStateException("parameter not recognized");
+            default -> throw new IllegalStateException("Part type parameter not found");
         };
     }
 }

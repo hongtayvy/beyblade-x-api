@@ -22,8 +22,8 @@ public class BeybladeXController {
     private final BeybladeXHelper beybladeXHelper = new BeybladeXHelper();
 
     @GetMapping
-    public Mono<PartDTO> getByPartType(
-            @RequestParam String partType
+    public PartDTO getByPartType(
+            @RequestParam(name = "part-type") String partType
     ) {
         PartType sanitizedPartType = beybladeXHelper.parameterHelper(partType);
         return beyBladeXService.getPartType(sanitizedPartType);
