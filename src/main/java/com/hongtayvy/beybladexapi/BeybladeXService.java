@@ -2,6 +2,8 @@ package com.hongtayvy.beybladexapi;
 
 import com.hongtayvy.beybladexapi.dto.PartDTO;
 import com.hongtayvy.beybladexapi.entity.PartEntity;
+import com.hongtayvy.beybladexapi.exception.BeybladeXExceptionEnum;
+import com.hongtayvy.beybladexapi.exception.BeybladeXNotFoundException;
 import com.hongtayvy.beybladexapi.mapper.BeybladeXMapper;
 import com.hongtayvy.beybladexapi.model.Part;
 import com.hongtayvy.beybladexapi.model.PartType;
@@ -12,15 +14,24 @@ import reactor.core.publisher.Mono;
 
 @Service
 public class BeybladeXService {
+    private final PartRepository partRepository;
+
     @Autowired
-    PartRepository partRepository;
+    public BeybladeXService(PartRepository partRepository){
+        this.partRepository = partRepository;
+    }
 
     private final BeybladeXMapper beybladeXMapper = new BeybladeXMapper();
 
-    public Mono<PartDTO> getPartType(PartType partType){
+    public PartDTO getPartType(PartType partType){
         PartEntity partEntity = partRepository.findByPartType(partType.getPartType());
-        Part part = beybladeXMapper.toPart(partEntity);
-        PartDTO partDTO = beybladeXMapper.toPartDTO(part);
-        return Mono.just(partDTO);
+        if(partEntity != null){
+            return beybladeXMapper.toPartDTO(
+                    beybladeXMapper.toPart(partEntity)
+            );
+        } else {
+            throw new BeybladeXNotFoundException(BeybladeXExceptionEnum.DATABASE_NOT_FOUND.getErrorMessage());
+        }
+
     }
 }
