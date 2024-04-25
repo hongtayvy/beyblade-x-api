@@ -1,5 +1,6 @@
-package com.hongtayvy.beybladexapi;
+package com.hongtayvy.beybladexapi.common;
 
+import com.hongtayvy.beybladexapi.exception.BeybladeXExceptionEnum;
 import com.hongtayvy.beybladexapi.model.PartType;
 
 import static com.hongtayvy.beybladexapi.model.PartType.BIT;
@@ -12,7 +13,7 @@ public class BeybladeXHelper {
             case "blade" -> BLADE;
             case "ratchet" -> RATCHET;
             case "bit" -> BIT;
-            default -> throw new IllegalStateException("Part type parameter not found");
+            default -> throw new IllegalStateException(BeybladeXExceptionEnum.PARAMETER_NOT_FOUND.getErrorMessage());
         };
     }
 }

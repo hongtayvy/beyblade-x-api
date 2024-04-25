@@ -2,6 +2,7 @@ package com.hongtayvy.beybladexapi;
 
 import com.hongtayvy.beybladexapi.dto.PartDTO;
 import com.hongtayvy.beybladexapi.entity.PartEntity;
+import com.hongtayvy.beybladexapi.exception.BeybladeXExceptionEnum;
 import com.hongtayvy.beybladexapi.exception.BeybladeXNotFoundException;
 import com.hongtayvy.beybladexapi.mapper.BeybladeXMapper;
 import com.hongtayvy.beybladexapi.model.Part;
@@ -29,7 +30,7 @@ public class BeybladeXService {
                     beybladeXMapper.toPart(partEntity)
             );
         } else {
-            throw new BeybladeXNotFoundException("No parts found in the database.");
+            throw new BeybladeXNotFoundException(BeybladeXExceptionEnum.DATABASE_NOT_FOUND.getErrorMessage());
         }
 
     }
