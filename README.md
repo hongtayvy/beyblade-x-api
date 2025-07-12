@@ -15,7 +15,7 @@ A Spring Boot RESTful service exposing Beyblade X tops and their parts.
 
 ### Prerequisites
 
-- **Java 17+**
+- **Java 21+**
 - **Gradle 8.x** (or use the [Gradle Wrapper](./gradlew))
 - **Docker** (optional, for container builds)
 
