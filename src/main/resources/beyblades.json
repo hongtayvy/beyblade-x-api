@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Dran Sword 3-60F",
+    "manufacturer": "Takara Tomy",
+    "series": "Beyblade X",
+    "blade": {
+      "name": "Dran Sword",
+      "attack": 9,
+      "defense": 3,
+      "stamina": 2,
+      "spinDirection": "Right",
+      "releaseDate": "2023-07-15",
+      "compatibility": "X Series"
+    },
+    "ratchet": {
+      "name": "3-60",
+      "weight": 3,
+      "description": "3-tab ratchet with 60mm height"
+    },
+    "bit": {
+      "name": "Flat",
+      "type": "Attack",
+      "tipShape": "Flat",
+      "material": "Plastic"
+    }
+  },
+  {
+    "name": "Hells Scythe 4-60T",
+    "manufacturer": "Takara Tomy",
+    "series": "Beyblade X",
+    "blade": {
+      "name": "Hells Scythe",
+      "attack": 4,
+      "defense": 7,
+      "stamina": 6,
+      "spinDirection": "Left",
+      "releaseDate": "2023-08-10",
+      "compatibility": "X Series"
+    },
+    "ratchet": {
+      "name": "4-60",
+      "weight": 4,
+      "description": "4-tab ratchet with 60mm height"
+    },
+    "bit": {
+      "name": "Taper",
+      "type": "Stamina",
+      "tipShape": "Cone",
+      "material": "Rubber"
+    }
+  },
+  {
+    "name": "Wizard Arrow 4-80B",
+    "manufacturer": "Takara Tomy",
+    "series": "Beyblade X",
+    "blade": {
+      "name": "Wizard Arrow",
+      "attack": 5,
+      "defense": 4,
+      "stamina": 7,
+      "spinDirection": "Right",
+      "releaseDate": "2023-09-20",
+      "compatibility": "X Series"
+    },
+    "ratchet": {
+      "name": "4-80",
+      "weight": 5,
+      "description": "4-tab ratchet with 80mm height"
+    },
+    "bit": {
+      "name": "Ball",
+      "type": "Balance",
+      "tipShape": "Rounded",
+      "material": "Plastic"
+    }
+  }
+]
