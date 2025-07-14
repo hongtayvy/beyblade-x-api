@@ -1,5 +1,5 @@
 # 1) Build stage
-FROM gradle:8.4-jdk17 AS builder
+FROM gradle:8.4-jdk21 AS builder
 WORKDIR /home/gradle/project
 COPY --chown=gradle:gradle . .
 RUN gradle clean bootJar --no-daemon
