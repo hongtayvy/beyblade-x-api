@@ -26,3 +26,10 @@ A Spring Boot RESTful service exposing Beyblade X tops and their parts.
 ```bash
 ./gradlew clean build
 java -jar build/libs/beyblade-x-api.jar
+```
+## Live Services
+:warning: Do note, API may take about a minutes to have the container spin up :warning:
+https://beyblade-x-api.onrender.com/
+
+### Swagger Documentation
+https://beyblade-x-api.onrender.com/swagger-ui.html
