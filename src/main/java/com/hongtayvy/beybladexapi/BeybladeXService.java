@@ -16,40 +16,58 @@ import java.util.List;
 
 @Service
 public class BeybladeXService {
-    private final BeybladeRepository beybladeRepo;
-    private final BladeRepository bladeRepo;
-    private final RatchetRepository ratchetRepo;
-    private final BitRepository bitRepo;
+    private final BeybladeRepository beybladeRepository;
+    private final BladeRepository bladeRepository;
+    private final RatchetRepository ratchetRepository;
+    private final BitRepository bitRepository;
 
     @Autowired
-    public BeybladeXService(BeybladeRepository beybladeRepo, BladeRepository bladeRepo,
-                            RatchetRepository ratchetRepo, BitRepository bitRepo){
-        this.beybladeRepo = beybladeRepo;
-        this.bladeRepo = bladeRepo;
-        this.ratchetRepo = ratchetRepo;
-        this.bitRepo = bitRepo;
+    public BeybladeXService(BeybladeRepository beybladeRepository, BladeRepository bladeRepository,
+                            RatchetRepository ratchetRepository, BitRepository bitRepository){
+        this.beybladeRepository = beybladeRepository;
+        this.bladeRepository = bladeRepository;
+        this.ratchetRepository = ratchetRepository;
+        this.bitRepository = bitRepository;
     }
 
     public List<Beyblade> beybladeFindAll(){
-        return beybladeRepo.findAll();
+        return beybladeRepository.findAll();
     }
 
     public ResponseEntity<Beyblade> beybladeFindById(Long id){
-        return beybladeRepo.findById(id)
+        return beybladeRepository.findById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
     public List<Blade> bladeFindAll(){
-        return bladeRepo.findAll();
+        return bladeRepository.findAll();
+    }
+
+    public ResponseEntity<Blade> bladeFindById(Long id){
+        return bladeRepository.findById(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 
     public List<Ratchet> ratchetFindAll(){
-        return ratchetRepo.findAll();
+        return ratchetRepository.findAll();
+    }
+
+    public ResponseEntity<Ratchet> ratchetFindById(Long id){
+        return ratchetRepository.findById(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 
     public List<Bit> bitFindAll(){
-        return bitRepo.findAll();
+        return bitRepository.findAll();
+    }
+
+    public ResponseEntity<Bit> bitFindById(Long id){
+        return bitRepository.findById(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 
 
