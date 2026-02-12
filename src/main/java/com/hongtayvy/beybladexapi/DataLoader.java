@@ -25,7 +25,7 @@ public class DataLoader implements CommandLineRunner {
         if (beybladeRepository.count() == 0) {
             ObjectMapper mapper = new ObjectMapper();
             TypeReference<List<Beyblade>> typeReference = new TypeReference<>() {};
-            InputStream inputStream = new ClassPathResource("beyblades.json").getInputStream();
+            InputStream inputStream = new ClassPathResource("bey_model.json").getInputStream();
             List<Beyblade> beyblades = mapper.readValue(inputStream, typeReference);
             beybladeRepository.saveAll(beyblades);
             System.out.println("✅ Loaded Beyblade data from JSON.");

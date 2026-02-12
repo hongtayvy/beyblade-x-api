@@ -8,20 +8,21 @@ import com.hongtayvy.beybladexapi.repository.BeybladeRepository;
 import com.hongtayvy.beybladexapi.repository.BitRepository;
 import com.hongtayvy.beybladexapi.repository.BladeRepository;
 import com.hongtayvy.beybladexapi.repository.RatchetRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
 @Service
+@Transactional(readOnly = true)
 public class BeybladeXService {
     private final BeybladeRepository beybladeRepository;
     private final BladeRepository bladeRepository;
     private final RatchetRepository ratchetRepository;
     private final BitRepository bitRepository;
 
-    @Autowired
     public BeybladeXService(BeybladeRepository beybladeRepository, BladeRepository bladeRepository,
                             RatchetRepository ratchetRepository, BitRepository bitRepository){
         this.beybladeRepository = beybladeRepository;
@@ -30,14 +31,18 @@ public class BeybladeXService {
         this.bitRepository = bitRepository;
     }
 
+    private static <T> ResponseEntity<T> findById(JpaRepository<T, Long> repo, Long id) {
+        return repo.findById(id)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
     public List<Beyblade> beybladeFindAll(){
         return beybladeRepository.findAll();
     }
 
     public ResponseEntity<Beyblade> beybladeFindById(Long id){
-        return beybladeRepository.findById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+        return findById(beybladeRepository, id);
     }
 
     public List<Blade> bladeFindAll(){
@@ -45,9 +50,7 @@ public class BeybladeXService {
     }
 
     public ResponseEntity<Blade> bladeFindById(Long id){
-        return bladeRepository.findById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+        return findById(bladeRepository, id);
     }
 
     public List<Ratchet> ratchetFindAll(){
@@ -55,9 +58,7 @@ public class BeybladeXService {
     }
 
     public ResponseEntity<Ratchet> ratchetFindById(Long id){
-        return ratchetRepository.findById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+        return findById(ratchetRepository, id);
     }
 
     public List<Bit> bitFindAll(){
@@ -65,9 +66,7 @@ public class BeybladeXService {
     }
 
     public ResponseEntity<Bit> bitFindById(Long id){
-        return bitRepository.findById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+        return findById(bitRepository, id);
     }
 
 
