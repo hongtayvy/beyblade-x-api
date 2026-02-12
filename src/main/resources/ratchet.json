@@ -1,0 +1,184 @@
+[
+  {
+    "name": "0-80",
+    "attack": 3,
+    "defense": 12,
+    "stamina": 15,
+    "weight": 7.6
+  },
+  {
+    "name": "0-70",
+    "attack": 3,
+    "defense": 13,
+    "stamina": 14,
+    "weight": 7.6
+  },
+  {
+    "name": "1-60",
+    "attack": 15,
+    "defense": 9,
+    "stamina": 6,
+    "weight": 6.0
+  },
+  {
+    "name": "1-80",
+    "attack": 17,
+    "defense": 9,
+    "stamina": 4,
+    "weight": 6.1
+  },
+  {
+    "name": "2-60",
+    "attack": 16,
+    "defense": 8,
+    "stamina": 6,
+    "weight": 6.2
+  },
+  {
+    "name": "2-70",
+    "attack": 10,
+    "defense": 12,
+    "stamina": 8,
+    "weight": 6.3
+  },
+  {
+    "name": "2-80",
+    "attack": 10,
+    "defense": 11,
+    "stamina": 9,
+    "weight": 6.3
+  },
+  {
+    "name": "3-60",
+    "attack": 15,
+    "defense": 9,
+    "stamina": 6,
+    "weight": 6.4
+  },
+  {
+    "name": "3-70",
+    "attack": 15,
+    "defense": 8,
+    "stamina": 7,
+    "weight": 6.4
+  },
+  {
+    "name": "3-80",
+    "attack": 15,
+    "defense": 7,
+    "stamina": 8,
+    "weight": 7.1
+  },
+  {
+    "name": "3-85",
+    "attack": 5,
+    "defense": 15,
+    "stamina": 10,
+    "weight": 4.6
+  },
+  {
+    "name": "4-55",
+    "attack": 7,
+    "defense": 11,
+    "stamina": 12,
+    "weight": 4.68
+  },
+  {
+    "name": "4-60",
+    "attack": 11,
+    "defense": 13,
+    "stamina": 6,
+    "weight": 6.4
+  },
+  {
+    "name": "4-70",
+    "attack": 11,
+    "defense": 12,
+    "stamina": 7,
+    "weight": 6.6
+  },
+  {
+    "name": "4-80",
+    "attack": 11,
+    "defense": 11,
+    "stamina": 8,
+    "weight": 7.0
+  },
+  {
+    "name": "5-60",
+    "attack": 12,
+    "defense": 9,
+    "stamina": 9,
+    "weight": 6.6
+  },
+  {
+    "name": "5-70",
+    "attack": 12,
+    "defense": 8,
+    "stamina": 10,
+    "weight": 6.6
+  },
+  {
+    "name": "5-80",
+    "attack": 12,
+    "defense": 8,
+    "stamina": 10,
+    "weight": 7.2
+  },
+  {
+    "name": "6-60",
+    "attack": 14,
+    "defense": 8,
+    "stamina": 8,
+    "weight": 6.1
+  },
+  {
+    "name": "6-80",
+    "attack": 14,
+    "defense": 6,
+    "stamina": 10,
+    "weight": 6.2
+  },
+  {
+    "name": "7-60",
+    "attack": 8,
+    "defense": 14,
+    "stamina": 8,
+    "weight": 7.1
+  },
+  {
+    "name": "7-70",
+    "attack": 8,
+    "defense": 12,
+    "stamina": 10,
+    "weight": 7.2
+  },
+  {
+    "name": "7-80",
+    "attack": 7,
+    "defense": 14,
+    "stamina": 9,
+    "weight": 7.3
+  },
+  {
+    "name": "9-60",
+    "attack": 12,
+    "defense": 9,
+    "stamina": 9,
+    "weight": 6.2
+  },
+  {
+    "name": "9-70",
+    "attack": 13,
+    "defense": 10,
+    "stamina": 7,
+    "weight": 6.5
+  },
+  {
+    "name": "9-80",
+    "attack": 13,
+    "defense": 10,
+    "stamina": 7,
+    "weight": 6.8
+  }
+]xdr6redszze55eer56op[]

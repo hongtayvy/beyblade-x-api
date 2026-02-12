@@ -8,20 +8,18 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/beybladex")
+@RequestMapping(value = "/beybladex", produces = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
 @Tag(name = "Beyblade X", description = "API for Beyblade X parts and combinations")
 public class BeybladeXController {
 
     private final BeybladeXService beybladeXService;
 
-    @Autowired
     public BeybladeXController(BeybladeXService beybladeXService) {
         this.beybladeXService = beybladeXService;
     }
@@ -48,7 +46,7 @@ public class BeybladeXController {
         return beybladeXService.bladeFindAll();
     }
 
-    @Operation(summary = "Get a Blades by ID")
+    @Operation(summary = "Get a Blade by ID")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Blade found"),
             @ApiResponse(responseCode = "404", description = "Blade not found")
