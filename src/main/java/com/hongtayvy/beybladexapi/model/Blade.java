@@ -18,11 +18,14 @@ public class Blade {
     @GeneratedValue
     private Long id;
     private String name;
-    private int attack;
-    private int defense;
-    private int stamina;
+    private String hasbroName;
+    private String line;
+    private String bladeType;
+    private String collaboration;
+    private Integer attack;
+    private Integer defense;
+    private Integer stamina;
     private String spinDirection;
     private String releaseDate;
     private String compatibility;
-
 }

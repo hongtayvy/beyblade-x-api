@@ -1,0 +1,5 @@
+[
+  {"name": "Break", "code": "B"},
+  {"name": "Flow", "code": "F"},
+  {"name": "Guard", "code": "G"}
+]

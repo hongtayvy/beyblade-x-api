@@ -13,15 +13,10 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Ratchet {
+public class OverBlade {
     @Id
     @GeneratedValue
     private Long id;
     private String name;
-    private String line;
-    private Integer attack;
-    private Integer defense;
-    private Integer stamina;
-    private Double weight;
-    private String description;
+    private String code;
 }

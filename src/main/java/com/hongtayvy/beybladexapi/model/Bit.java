@@ -18,6 +18,15 @@ public class Bit {
     @GeneratedValue
     private Long id;
     private String name;
+    private String code;
+    private String category;
+    private String line;
+    private Double weight;
+    private Integer attack;
+    private Integer defense;
+    private Integer stamina;
+    private Integer burst;
+    private Integer dash;
     private String type;
     private String tipShape;
     private String material;
