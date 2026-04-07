@@ -1,0 +1,18 @@
+[
+  {"name": "Antler", "hasbroName": "Antler"},
+  {"name": "Arc", "hasbroName": "Arc"},
+  {"name": "Blast", "hasbroName": "Blast"},
+  {"name": "Brave", "hasbroName": "Courage"},
+  {"name": "Brush", "hasbroName": "Brush"},
+  {"name": "Dark", "hasbroName": "Dark"},
+  {"name": "Eclipse", "hasbroName": "Umbra"},
+  {"name": "Fang", "hasbroName": "Fang"},
+  {"name": "Flame", "hasbroName": "Flame"},
+  {"name": "Flare", "hasbroName": null},
+  {"name": "Fort", "hasbroName": "Fort"},
+  {"name": "Hunt", "hasbroName": "Hunt"},
+  {"name": "Might", "hasbroName": "Might"},
+  {"name": "Reaper", "hasbroName": "Reaper"},
+  {"name": "Volt", "hasbroName": "Volt"},
+  {"name": "Wriggle", "hasbroName": "Wriggle"}
+]

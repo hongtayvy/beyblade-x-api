@@ -13,17 +13,24 @@ import lombok.Setter;
 @NoArgsConstructor
 public class PartDTO {
     private String name;
+    private String hasbroName;
     private String partType;
     private String brand;
     private String type;
     private String spin;
+    private String line;
+    private String bladeType;
+    private String collaboration;
+    private String code;
+    private String category;
     private Integer attack;
     private Integer defense;
     private Integer stamina;
     private Integer endurance;
+    private Integer burst;
     private Integer dash;
     private Integer burstResistance;
-    private double weight;
-    private double height;
-    private double width;
+    private Double weight;
+    private Double height;
+    private Double width;
 }
