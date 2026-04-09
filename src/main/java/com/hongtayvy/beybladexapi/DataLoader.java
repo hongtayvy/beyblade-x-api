@@ -1,8 +1,8 @@
 package com.hongtayvy.beybladexapi;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.DeserializationFeature;
+import tools.jackson.databind.json.JsonMapper;
 import com.hongtayvy.beybladexapi.model.*;
 import com.hongtayvy.beybladexapi.repository.*;
 import org.springframework.boot.CommandLineRunner;
@@ -49,8 +49,9 @@ public class DataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        JsonMapper mapper = JsonMapper.builder()
+                .disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES)
+                .build();
 
         if (bladeRepository.count() == 0) {
             InputStream inputStream = new ClassPathResource("blade.json").getInputStream();
