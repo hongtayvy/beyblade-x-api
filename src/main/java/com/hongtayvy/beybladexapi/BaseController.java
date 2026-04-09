@@ -1,23 +1,20 @@
 package com.hongtayvy.beybladexapi;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-@RestController
+@Controller
 class BaseController {
 
     @GetMapping("/")
-    public java.util.Map<String, Object> root() {
-        return java.util.Map.of(
-                "status", "ok",
-                "swagger", "/swagger-ui/index.html",
-                "openapi", "/v3/api-docs",
-                "base", "/beybladex"
-        );
+    public String root() {
+        return "redirect:/swagger-ui/index.html";
     }
 
     // Common bot/probe requests
     @GetMapping({"/favicon.ico", "/robots.txt"})
+    @ResponseBody
     public org.springframework.http.ResponseEntity<Void> noContent() {
         return org.springframework.http.ResponseEntity.noContent().build();
     }
